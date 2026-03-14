@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FitNova – Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="auth-shell">
+      <div class="auth-card">
+        <div class="auth-inner">
+          <div class="auth-logo">
+            <div class="auth-logo-pulse"></div>
+          </div>
+          <div class="auth-title">Welcome Back</div>
+          <div class="auth-subtitle">
+            Log in to track your fitness journey.
+          </div>
+
+          <form data-auth-form>
+            <div class="auth-form-group">
+              <label class="auth-label">Email or Phone</label>
+              <input
+                class="auth-input"
+                name="identifier"
+                placeholder="Enter your email or phone number"
+              />
+            </div>
+            <div class="auth-form-group">
+              <label class="auth-label">Password</label>
+              <input
+                class="auth-input"
+                name="password"
+                type="password"
+                placeholder="Enter your password"
+              />
+            </div>
+            <button class="auth-button" type="submit">Log In</button>
+            <div class="auth-error" data-auth-error></div>
+          </form>
+
+          <div class="auth-footer">
+            Don’t have an account?
+            <a href="register.html">Sign up</a>
+          </div>
+
+          <div
+            class="auth-footer"
+            style="margin-top: 10px; display: flex; justify-content: flex-end"
+          >
+            <span
+              style="cursor: pointer"
+              data-theme-toggle
+            >
+              Toggle theme
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+      FitNova.initAuthPage("login");
+    </script>
+  </body>
+</html>
