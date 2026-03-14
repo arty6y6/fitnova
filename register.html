@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FitNova – Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="auth-shell">
+      <div class="auth-card">
+        <div class="auth-inner">
+          <div class="auth-logo">
+            <div class="auth-logo-pulse"></div>
+          </div>
+          <div class="auth-title">Create Account</div>
+          <div class="auth-subtitle">
+            Start your fitness journey today.
+          </div>
+
+          <form data-auth-form>
+            <div class="auth-form-group">
+              <label class="auth-label">Full Name</label>
+              <input
+                class="auth-input"
+                name="fullName"
+                placeholder="John Doe"
+              />
+            </div>
+            <div class="auth-form-group">
+              <label class="auth-label">Username *</label>
+              <input
+                class="auth-input"
+                name="username"
+                placeholder="johndoe123"
+              />
+            </div>
+            <div class="auth-form-group">
+              <label class="auth-label">Email or Phone *</label>
+              <input
+                class="auth-input"
+                name="emailOrPhone"
+                placeholder="john@example.com"
+              />
+            </div>
+            <div class="auth-form-group">
+              <label class="auth-label">Password *</label>
+              <input
+                class="auth-input"
+                name="password"
+                type="password"
+                placeholder="••••••••"
+              />
+            </div>
+            <button class="auth-button" type="submit">Sign Up</button>
+            <div class="auth-error" data-auth-error></div>
+          </form>
+
+          <div class="auth-footer">
+            Already have an account?
+            <a href="login.html">Log in</a>
+          </div>
+
+          <div
+            class="auth-footer"
+            style="margin-top: 10px; display: flex; justify-content: flex-end"
+          >
+            <span
+              style="cursor: pointer"
+              data-theme-toggle
+            >
+              Toggle theme
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+      FitNova.initAuthPage("register");
+    </script>
+  </body>
+</html>
