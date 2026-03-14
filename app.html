@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FitNova – App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="app-sidebar">
+        <div class="app-brand">
+          <div class="app-brand-logo">
+            <div class="auth-logo-pulse"></div>
+          </div>
+          <div class="app-brand-text">
+            <div class="app-brand-name">FitNova</div>
+            <div class="app-brand-tagline">Train with intent.</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="app-nav-section-label">Overview</div>
+          <div class="app-nav">
+            <div class="app-nav-item active" data-nav="dashboard">
+              <div class="app-nav-dot"></div>
+              <span>Dashboard</span>
+            </div>
+            <div class="app-nav-item" data-nav="workouts">
+              <div class="app-nav-dot"></div>
+              <span>Workouts</span>
+            </div>
+            <div class="app-nav-item" data-nav="goals">
+              <div class="app-nav-dot"></div>
+              <span>Goals</span>
+            </div>
+            <div class="app-nav-item" data-nav="history">
+              <div class="app-nav-dot"></div>
+              <span>History</span>
+            </div>
+            <div class="app-nav-item" data-nav="settings">
+              <div class="app-nav-dot"></div>
+              <span>Settings</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-sidebar-footer">
+          <div class="app-theme-toggle">
+            <span>Theme</span>
+            <div class="theme-pill" data-theme-toggle>
+              <div class="theme-thumb"></div>
+            </div>
+          </div>
+
+          <div class="app-user">
+            <div
+              class="app-user-avatar"
+              data-user-avatar
+            ></div>
+            <div class="app-user-meta">
+              <div class="app-user-name" data-user-name>—</div>
+              <div class="app-user-handle" data-user-handle>@—</div>
+            </div>
+            <div class="app-logout" data-logout>Log out</div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="app-main">
+        <div class="app-main-inner">
+          <!-- DASHBOARD -->
+          <section class="app-page active" data-page="dashboard">
+            <div class="page-header">
+              <div class="page-title-block">
+                <div class="page-title">Dashboard</div>
+                <div class="page-subtitle">
+                  Friday fantastic! Push hard into the weekend.
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-stats-grid">
+              <div class="card">
+                <div class="stat-card-label">Total Workouts</div>
+                <div class="stat-card-value" data-stat-total-workouts>0</div>
+                <div class="stat-card-meta">All time</div>
+              </div>
+              <div class="card">
+                <div class="stat-card-label">Active Minutes</div>
+                <div class="stat-card-value" data-stat-active-minutes>0 min</div>
+                <div class="stat-card-meta">All time</div>
+              </div>
+              <div class="card">
+                <div class="stat-card-label">Current Streak</div>
+                <div class="stat-card-value" data-stat-streak>0 days</div>
+                <div class="stat-card-meta">Log a workout to start</div>
+              </div>
+              <div class="card">
+                <div class="stat-card-label">Active Goals</div>
+                <div class="stat-card-value" data-stat-active-goals>0</div>
+                <div class="stat-card-meta">Keep pushing</div>
+              </div>
+            </div>
+
+            <div class="dashboard-grid">
+              <div class="card">
+                <div class="section-title-row">
+                  <div>
+                    <div class="section-title">Weekly Activity (Minutes)</div>
+                    <div class="section-subtitle">
+                      Sat – Fri overview of your logged time.
+                    </div>
+                  </div>
+                </div>
+                <div class="chart-bars">
+                  <div class="chart-bar" data-chart-day="sat">
+                    <div class="chart-bar-fill"></div>
+                  </div>
+                  <div class="chart-bar" data-chart-day="sun">
+                    <div class="chart-bar-fill"></div>
+                  </div>
+                  <div class="chart-bar" data-chart-day="mon">
+                    <div class="chart-bar-fill"></div>
+                  </div>
+                  <div class="chart-bar" data-chart-day="tue">
+                    <div class="chart-bar-fill"></div>
+                  </div>
+                  <div class="chart-bar" data-chart-day="wed">
+                    <div class="chart-bar-fill"></div>
+                  </div>
+                  <div class="chart-bar" data-chart-day="thu">
+                    <div class="chart-bar-fill"></div>
+                  </div>
+                  <div class="chart-bar" data-chart-day="fri">
+                    <div class="chart-bar-fill"></div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 6px;
+                  "
+                >
+                  <span class="chart-bar-label">Sat</span>
+                  <span class="chart-bar-label">Sun</span>
+                  <span class="chart-bar-label">Mon</span>
+                  <span class="chart-bar-label">Tue</span>
+                  <span class="chart-bar-label">Wed</span>
+                  <span class="chart-bar-label">Thu</span>
+                  <span class="chart-bar-label">Fri</span>
+                </div>
+              </div>
+
+              <div class="card card-soft">
+                <div class="section-title-row">
+                  <div>
+                    <div class="section-title">Recent Sessions</div>
+                    <div class="section-subtitle">
+                      Your latest logged workouts.
+                    </div>
+                  </div>
+                </div>
+                <div class="list" data-dashboard-recent></div>
+
+                <div style="margin-top: 14px">
+                  <div class="section-title-row">
+                    <div>
+                      <div class="section-title">Top Goal</div>
+                      <div class="section-subtitle">
+                        Stay locked in on your main target.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <div class="list-item-main">
+                      <div class="list-item-title" data-dashboard-top-goal>
+                        —
+                      </div>
+                      <div class="list-item-meta">
+                        Progress updates as you log sessions.
+                      </div>
+                    </div>
+                    <div class="list-item-tag">Goal</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- WORKOUTS -->
+          <section class="app-page" data-page="workouts">
+            <div class="page-header">
+              <div class="page-title-block">
+                <div class="page-title">Your Workouts</div>
+                <div class="page-subtitle">
+                  Manage and log your routines.
+                </div>
+              </div>
+              <button
+                class="primary-button"
+                type="button"
+                data-workouts-create
+              >
+                + Create Workout
+              </button>
+            </div>
+
+            <div class="empty-state" data-workouts-empty>
+              <div class="empty-title">No workouts yet</div>
+              <div class="empty-body">
+                Build your first routine and start logging sessions. You can add
+                exercises, set reps and weights, then log your performance after
+                each session.
+              </div>
+              <button
+                class="primary-button"
+                type="button"
+                data-workouts-create-first
+              >
+                + Create Your First Workout
+              </button>
+            </div>
+
+            <div class="list" data-workouts-list></div>
+          </section>
+
+          <!-- CREATE WORKOUT -->
+          <section class="app-page" data-page="create-workout">
+            <div class="page-header">
+              <div class="page-title-block">
+                <div class="page-title">Create Routine</div>
+                <div class="page-subtitle">
+                  Design your custom workout plan.
+                </div>
+              </div>
+              <button
+                class="secondary-button"
+                type="button"
+                data-create-workout-back
+              >
+                Back to Workouts
+              </button>
+            </div>
+
+            <form data-create-workout-form>
+              <div class="form-group">
+                <label class="form-label">Workout Title</label>
+                <input
+                  class="form-input"
+                  name="workoutTitle"
+                  placeholder="e.g., Upper Body Power"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Description (Optional)</label>
+                <textarea
+                  class="form-textarea"
+                  name="workoutDescription"
+                  placeholder="Focus on chest and back..."
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Exercises</label>
+                <div data-exercise-rows></div>
+                <button
+                  class="secondary-button"
+                  type="button"
+                  data-add-exercise
+                  style="margin-top: 6px"
+                >
+                  + Add Exercise
+                </button>
+              </div>
+
+              <button class="primary-button" type="submit">Save Workout</button>
+            </form>
+          </section>
+
+          <!-- GOALS -->
+          <section class="app-page" data-page="goals">
+            <div class="page-header">
+              <div class="page-title-block">
+                <div class="page-title">Fitness Goals</div>
+                <div class="page-subtitle">
+                  Set targets and track your progress.
+                </div>
+              </div>
+              <button class="primary-button" type="button" data-goals-set>
+                + Set New Goal
+              </button>
+            </div>
+
+            <div class="empty-state" data-goals-empty>
+              <div class="empty-title">No goals set yet</div>
+              <div class="empty-body">
+                Goals keep you focused and motivated. Track weight loss,
+                strength gains, distance targets — anything measurable.
+              </div>
+              <button
+                class="primary-button"
+                type="button"
+                data-goals-set-first
+              >
+                + Set Your First Goal
+              </button>
+            </div>
+
+            <div class="list" data-goals-list></div>
+
+            <!-- Goal modal -->
+            <div
+              style="
+                position: fixed;
+                inset: 0;
+                background: rgba(15, 23, 42, 0.7);
+                display: none;
+                align-items: center;
+                justify-content: center;
+              "
+              data-goal-modal-overlay
+            ></div>
+            <div
+              class="card"
+              style="
+                position: fixed;
+                max-width: 420px;
+                width: 100%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                display: none;
+                z-index: 20;
+              "
+              data-goal-modal
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin-bottom: 10px;
+                "
+              >
+                <div class="section-title">Create Goal</div>
+                <button
+                  type="button"
+                  class="secondary-button"
+                  data-goal-modal-close
+                >
+                  Close
+                </button>
+              </div>
+              <form data-goal-form>
+                <div class="form-group">
+                  <label class="form-label">Goal Title</label>
+                  <input
+                    class="form-input"
+                    name="goalTitle"
+                    placeholder="e.g., Lose Weight, Deadlift PR"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Description (Optional)</label>
+                  <textarea
+                    class="form-textarea"
+                    name="goalDescription"
+                    placeholder="e.g., Want to reach 225 lbs by summer"
+                  ></textarea>
+                </div>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label">Target Value</label>
+                    <input
+                      class="form-input"
+                      name="goalTarget"
+                      type="number"
+                      min="0"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Unit</label>
+                    <input
+                      class="form-input"
+                      name="goalUnit"
+                      placeholder="kg"
+                      value="kg"
+                    />
+                  </div>
+                </div>
+                <button class="primary-button" type="submit">Save Goal</button>
+              </form>
+            </div>
+          </section>
+
+          <!-- HISTORY -->
+          <section class="app-page" data-page="history">
+            <div class="page-header">
+              <div class="page-title-block">
+                <div class="page-title">Session History</div>
+                <div class="page-subtitle">
+                  Review your logged workouts over time.
+                </div>
+              </div>
+            </div>
+
+            <div class="history-summary">
+              <div class="card">
+                <div class="stat-card-label">Total Sessions</div>
+                <div class="stat-card-value" data-history-total>0</div>
+              </div>
+              <div class="card">
+                <div class="stat-card-label">Hours Trained</div>
+                <div class="stat-card-value" data-history-hours>0h</div>
+              </div>
+              <div class="card">
+                <div class="stat-card-label">Avg Duration</div>
+                <div class="stat-card-value" data-history-avg>0m</div>
+              </div>
+            </div>
+
+            <div class="list" data-history-list></div>
+          </section>
+
+          <!-- SETTINGS -->
+          <section class="app-page" data-page="settings">
+            <div class="page-header">
+              <div class="page-title-block">
+                <div class="page-title">Settings</div>
+                <div class="page-subtitle">
+                  Manage your account preferences.
+                </div>
+              </div>
+            </div>
+
+            <div class="settings-grid">
+              <div class="card">
+                <div class="section-title">Profile</div>
+                <div class="section-subtitle" style="margin-bottom: 10px">
+                  Update your avatar and identity.
+                </div>
+
+                <div class="profile-avatar-large" data-settings-avatar></div>
+
+                <div class="form-group">
+                  <label class="form-label"
+                    >Profile Picture URL (optional)</label
+                  >
+                  <input
+                    class="form-input"
+                    name="avatarUrl"
+                    placeholder="https://example.com/avatar.jpg"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Full Name</label>
+                  <input
+                    class="form-input"
+                    name="settingsFullName"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Username</label>
+                  <input
+                    class="form-input"
+                    name="settingsUsername"
+                    placeholder="username"
+                  />
+                </div>
+
+                <button
+                  class="primary-button"
+                  type="button"
+                  data-settings-save
+                >
+                  Save Changes
+                </button>
+              </div>
+
+              <div class="card">
+                <div class="section-title">Push Notifications</div>
+                <div class="section-subtitle" style="margin-bottom: 10px">
+                  Get real device notifications about your fitness progress.
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    <input
+                      type="checkbox"
+                      name="notifWorkout"
+                      style="margin-right: 6px"
+                    />
+                    Workout &amp; Goal Alerts
+                  </label>
+                  <div class="section-subtitle">
+                    Streak updates after logging, and goal completion alerts.
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    <input
+                      type="checkbox"
+                      name="notifDaily"
+                      style="margin-right: 6px"
+                    />
+                    Daily Workout Reminder
+                  </label>
+                  <div class="section-subtitle">
+                    Get a push notification every day at your chosen time.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+      FitNova.initApp();
+    </script>
+  </body>
+</html>
